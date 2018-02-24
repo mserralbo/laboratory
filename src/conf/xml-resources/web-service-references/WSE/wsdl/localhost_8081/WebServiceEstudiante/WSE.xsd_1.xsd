@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.laboratorio.proyecto.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.laboratorio.proyecto.com/">
+
+<xs:element name="getEstudiante" type="tns:getEstudiante" />
+
+<xs:element name="getEstudianteResponse" type="tns:getEstudianteResponse" />
+
+<xs:complexType name="getEstudiante">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getEstudianteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estudiante" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="estudiante">
+<xs:sequence>
+<xs:element name="age" type="xs:int" />
+<xs:element name="group" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="specialty" type="xs:string" minOccurs="0" />
+<xs:element name="surname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
